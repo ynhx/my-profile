@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './styles.css';
 import TechStack from "./components/TechStack";
 import Projects from "./components/Projects";

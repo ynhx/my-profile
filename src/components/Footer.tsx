@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import './footer.css';
 import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
 

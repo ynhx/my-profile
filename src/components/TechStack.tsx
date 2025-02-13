@@ -1,4 +1,3 @@
-import React from 'react';
 import './techstack.css';
 
 import javaLogo from "../assets/java_logo.png";
