@@ -1,0 +1,30 @@
+.tech-stack {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    padding: 20px 0;
+    background-color: transparent;
+    position: relative;
+  }
+  
+  .tech-stack-slider {
+    display: flex;
+    gap: 60px;
+    animation: scroll 25s linear infinite;
+  }
+  
+  .tech-logo {
+    width: 70px;
+    height: 75px;
+    flex-shrink: 0;
+  }
+  
+  @keyframes scroll {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  

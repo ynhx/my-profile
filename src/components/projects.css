@@ -1,0 +1,59 @@
+.my-projects-title {
+    font-size: 3rem;
+    margin: 15px 0;
+    padding: 20px;
+}
+
+body {
+    background-color: black;
+    color: azure;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.project-desc {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.projects-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.project-title {
+    font-size: 1.8rem;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.message {
+    font-style: italic;
+    font-size: 14px;
+    padding: 15px;
+}
+
+button {
+    border-radius: 30%;
+    padding: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: darkseagreen;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkolivegreen;
+    color: gray;
+}
+
+a {
+    color: darkseagreen;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+a:hover {
+    color: darkolivegreen;
+}

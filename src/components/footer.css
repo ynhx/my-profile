@@ -1,0 +1,50 @@
+.footer {
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.footer-content {
+  margin-bottom: 10px;
+}
+
+.footer h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icon {
+  font-size: 24px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: darkseagreen;
+}
+
+.footer-rights {
+  font-size: 14px;
+  margin-top: 10px;
+  opacity: 0.7;
+}
+
+.contact-link {
+  color: darkseagreen;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-link:hover {
+  color: darkolivegreen;
+}

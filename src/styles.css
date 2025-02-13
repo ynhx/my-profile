@@ -1,0 +1,52 @@
+.app-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.main-title {
+    font-size: 4rem;
+    margin: 20px 0;
+    padding: 50px;
+}
+
+.about-me-title {
+    font-size: 3rem;
+    margin: 15px 0;
+    padding-bottom: 20px;
+}
+
+.intro-text {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: black;
+    color:azure ;
+}
+
+.projects-link {
+    color: darkseagreen;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.projects-link:hover {
+    color: darkolivegreen;
+}
+
+.prompt {
+    font-size: 26px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.tech-stack-explanation {
+    font-size: 13px;
+    max-width: 800px;
+    margin: 0 auto;
+}
