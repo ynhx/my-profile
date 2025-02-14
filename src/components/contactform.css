@@ -61,4 +61,20 @@
   .close-button:hover {
     background-color: darkred;
   }
+
+  .tick-icon {
+    height: 40px;
+    width: 40px;
+    flex-shrink: 0;
+  }
+
+  .x-icon {
+    font-size: 40px;
+    width: 40px;
+    flex-shrink: 0;
+  }
+
+  .message-sent {
+    font-size: 16px;
+  }
   

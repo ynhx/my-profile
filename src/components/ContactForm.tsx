@@ -1,42 +1,51 @@
-import React, { useState } from 'react';
-import './contactform.css';
+import "./contactform.css";
+import { useForm, ValidationError } from "@formspree/react";
+import tickIcon from "../assets/tick_icon.png";
+import redXIcon from "../assets/red_x_icon.png";
 
 const ContactForm = ({ onClose }: { onClose: () => void }) => {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [message, setMessage] = useState("");
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-
-        console.log({ name, email, message });
-        onClose();
-    };
+    const [state, handleSubmit] = useForm("xqaedrze");
 
     return (
         <div className="popup-overlay">
             <div className="popup">
                 <h2>Contact Me</h2>
-                <form onSubmit={handleSubmit}>
-                    <label>
-                        Name:
-                        <input type="text" value={name}
-                            onChange={(e) => setName(e.target.value)} required />
-                    </label>
-                    <label>
-                        Email:
-                        <input type="email" value={email}
-                            onChange={(e) => setEmail(e.target.value)} required />
-                    </label>
-                    <label>
-                        Message:
-                        <textarea value={message}
-                            onChange={(e) => setMessage(e.target.value)} required />
-                    </label>
-                    <button type="submit">Send Message</button>
-                </form>
+
+                {state.succeeded ? (
+                    <div className="success-message">
+                        <p className="message-sent">Message sent!</p>
+                        <img src={tickIcon} alt="Tick icon" className="tick-icon"/>
+                    </div>
+                ) : (
+                    <form onSubmit={handleSubmit}>
+                        <label htmlFor="email">
+                            Email:
+                            <input id="email" type="email" name="email" required />
+                        </label>
+                        <ValidationError prefix="Email" field="email" errors={state.errors} />
+
+                        <label htmlFor="message">
+                            Message:
+                            <textarea id="message" name="message" required />
+                        </label>
+                        <ValidationError prefix="Message" field="message" errors={state.errors} />
+
+                        <button type="submit" disabled={state.submitting}>
+                            Send Message
+                        </button>
+                    </form>
+                )}
+
+                {state.errors && (
+                    <div className="fail-message">
+                        <p>Something went wrong...</p>
+                        <img src={redXIcon} alt="Red X icon" className="x-icon" />
+                        
+                    </div>
+                )}
+
                 <button className="close-button" onClick={onClose}>
-                    Cancel
+                    Close
                 </button>
             </div>
         </div>
