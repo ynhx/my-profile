@@ -9,7 +9,7 @@ const Projects: React.FC<ProjectsProps> = ({ goBack }) => {
 
     useEffect(() => {
         document.title = "My Projects | Yin";
-      }, []);
+    }, []);
 
     return (
         <div className="projects-container">

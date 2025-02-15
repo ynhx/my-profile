@@ -13,7 +13,6 @@ const App = () => {
     setShowContactForm(!showContactForm); // Toggle the contact form
   };
 
-
   useEffect(() => {
     if (currentPage === "home") {
       document.title = "Main page | Yin";

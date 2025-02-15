@@ -14,7 +14,7 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
                 {state.succeeded ? (
                     <div className="success-message">
                         <p className="message-sent">Message sent!</p>
-                        <img src={tickIcon} alt="Tick icon" className="tick-icon"/>
+                        <img src={tickIcon} alt="Tick icon" className="tick-icon" />
                     </div>
                 ) : (
                     <form onSubmit={handleSubmit}>
@@ -35,15 +35,13 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
                         </button>
                     </form>
                 )}
-
                 {state.errors && (
                     <div className="fail-message">
                         <p>Something went wrong...</p>
                         <img src={redXIcon} alt="Red X icon" className="x-icon" />
-                        
+
                     </div>
                 )}
-
                 <button className="close-button" onClick={onClose}>
                     Close
                 </button>

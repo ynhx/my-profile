@@ -1,80 +1,79 @@
 .popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .popup {
-    background-color: darkslategray;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 350px;
-  }
-  
-  .popup h2 {
-    margin: 0 0 20px 0;
-  }
-  
-  .popup label {
-    display: block;
-    margin: 10px 0px 5px;
-    padding-right: 18px;
-  }
-  
-  .popup input,
-  .popup textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .form button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .form button:hover {
-    background-color: #0056b3;
-  }
-  
-  .close-button {
-    background-color: red;
-    border: none;
-    color: white;
-    cursor: pointer;
-    margin-top: 10px;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .close-button:hover {
-    background-color: darkred;
-  }
+.popup {
+  background-color: darkslategray;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 350px;
+}
 
-  .tick-icon {
-    height: 40px;
-    width: 40px;
-    flex-shrink: 0;
-  }
+.popup h2 {
+  margin: 0 0 20px 0;
+}
 
-  .x-icon {
-    font-size: 40px;
-    width: 40px;
-    flex-shrink: 0;
-  }
+.popup label {
+  display: block;
+  margin: 10px 0px 5px;
+  padding-right: 18px;
+}
 
-  .message-sent {
-    font-size: 16px;
-  }
-  
+.popup input,
+.popup textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #0056b3;
+}
+
+.close-button {
+  background-color: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.close-button:hover {
+  background-color: darkred;
+}
+
+.tick-icon {
+  height: 40px;
+  width: 40px;
+  flex-shrink: 0;
+}
+
+.x-icon {
+  font-size: 40px;
+  width: 40px;
+  flex-shrink: 0;
+}
+
+.message-sent {
+  font-size: 16px;
+}
