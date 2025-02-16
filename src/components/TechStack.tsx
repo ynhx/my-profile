@@ -27,12 +27,20 @@ const techStack = [
 ];
 
 const TechStack = () => {
+
+    const duplicatedTechStack = [
+        ...techStack, ...techStack, ...techStack, ...techStack,
+        ...techStack, ...techStack, ...techStack, ...techStack,
+        ...techStack, ...techStack, ...techStack, ...techStack,
+        ...techStack, ...techStack, ...techStack, ...techStack
+      ];
+
     return (
         <div>
             <h2 className="tech-stack-title">MY TECH STACK</h2>
             <div className="tech-stack">
                 <div className="tech-stack-slider">
-                    {techStack.map((tech, index) => (
+                    {duplicatedTechStack.map((tech, index) => (
                         <img
                             key={index}
                             src={tech.logo}

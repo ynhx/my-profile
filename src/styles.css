@@ -1,12 +1,15 @@
 .app-container {
     text-align: center;
     padding: 20px;
+    overflow-x: hidden;
 }
 
 .main-title {
     font-size: 4rem;
     margin: 20px 0;
     padding: 50px;
+    white-space: normal;
+    ;
 }
 
 .about-me-title {
@@ -19,6 +22,7 @@
     font-size: 1.5rem;
     max-width: 800px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 body {
@@ -38,7 +42,7 @@ body {
 }
 
 .prompt {
-    font-size: 26px;
+    font-size: 1.5rem;
     max-width: 800px;
     margin: 0 auto;
     padding-top: 20px;
@@ -46,7 +50,41 @@ body {
 }
 
 .tech-stack-explanation {
-    font-size: 13px;
+    font-size: 0.9rem;
     max-width: 800px;
     margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 3rem;
+        padding: 10px;
+    }
+
+    .about-me-title {
+        font-size: 2rem;
+    }
+
+    .intro-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2rem;
+        padding: 5px;
+    }
+
+    .about-me-title {
+        font-size: 1.5rem;
+    }
+
+    .intro-text {
+        font-size: 1rem;
+    }
+
+    .prompt {
+        font-size: 1rem;
+    }
 }

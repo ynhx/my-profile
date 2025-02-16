@@ -57,3 +57,35 @@ a {
 a:hover {
     color: darkolivegreen;
 }
+
+@media (max-width: 768px) {
+    .my-projects-title {
+        font-size: 2.5rem;
+        padding: 10px;
+    }
+
+    .project-title {
+        font-size: 1.5rem;
+        margin: 15px 0;
+    }
+
+    .project-desc {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .my-projects-title {
+        font-size: 2rem;
+        padding: 5px;
+    }
+
+    .project-title {
+        font-size: 1.3rem;
+        margin: 10px 0;
+    }
+
+    .project-desc {
+        font-size: 1.1rem;
+    }
+}
