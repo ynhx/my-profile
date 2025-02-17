@@ -36,9 +36,9 @@ const App = () => {
             <br></br>
             So while in the search for that, I am currently putting my
             focus in growing my portfolio, learning new skills, new programming
-            languages, making friends with other programmers and basically trying to do
+            languages, connecting with other programmers and basically trying to do
             things that are going to help me advance in my career since I never focused
-            much on this stuff while I was in school and just go consumed fully in it
+            much on this stuff while I was in school and just got consumed fully in it
             and now trying to fill in those gaps. (I take full responsibility!)
             <br></br>
             <br></br>
