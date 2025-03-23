@@ -5,6 +5,8 @@ import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import ContactForm from './components/ContactForm';
 import content from "./data/content";
+import Navbar from "./components/Navbar";
+import Resume from "./components/Resume";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -19,11 +21,14 @@ const App = () => {
       document.title = "Main page | Yin";
     } else if (currentPage === "projects") {
       document.title = "My Projects | Yin";
+    } else if (currentPage === "resume") {
+      document.title = "Resume | Yin";
     }
   }, [currentPage]);
 
   return (
     <div className="app-container">
+      <Navbar setCurrentPage={setCurrentPage} />
       {currentPage === "home" ? (
         <>
           <h1 className="main-title">YINNNNNNNNNN!</h1>
@@ -44,9 +49,11 @@ const App = () => {
             using some of these tools.
           </p>
         </>
-      ) : (
+      ) : currentPage === "projects" ? (
         <Projects goBack={() => setCurrentPage("home")} />
-      )}
+      ) : currentPage === "resume" ? (
+        <Resume />
+      ) : null}
       {showContactForm && (
         <ContactForm onClose={toggleContactForm} />
       )}
