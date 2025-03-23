@@ -1,5 +1,6 @@
-export const aboutMeText = `
-Hi! I am Yin. I am currently a Computer Science final-year student. I am soooooo close to
+const content = {
+
+aboutMeText: `Hi! I am Yin. I am currently a Computer Science final-year student. I am soooooo close to
 graduating though, my school just needs me to complete an internship that runs
 for at least six month in order for me to be able to fulfill my graduation
 requirements.
@@ -10,17 +11,13 @@ to them from time to time. I'm just super excited to be doing this internship
 as a software developer.
             
 This is my personal website (also still in the works) and below you can find the things I
-know so far, my expertise and things I am currently focused on.
-`;
+know so far, my expertise and things I am currently focused on.`,
 
-export const techStackExplanation = `
-Some of these, I learned at school, with Java being my main focus at school
+techStackExplanation: `Some of these, I learned at school, with Java being my main focus at school
 and others I self-taught. As you can already guess, Java is my strong
-suit and also my favorite currently.
-`;
+suit and also my favorite currently.`,
 
-export const projectDescription = `
-This is my first solo project
+projectDescription: `This is my first solo project
 that I am currently working on. I have
 created a Liverpool FC fan page on
 <a href="https://www.facebook.com/eolupdates" target="_blank" rel="noopener noreferrer"> Facebook </a>
@@ -45,5 +42,7 @@ fans in general an independent platform of all things Liverpool.
 This app is going to have everything, and everything about Liverpool,
 going all the way back to its history down to latest updates from a minute
 ago. My idea is to have it all in there and to give myself more solo
-experience here, and to have something I am proud of.
-`
+experience here, and to have something I am proud of.`
+};
+
+export default content;

@@ -4,7 +4,7 @@ import TechStack from "./components/TechStack";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import ContactForm from './components/ContactForm';
-import { aboutMeText, techStackExplanation } from "./data/content";
+import content from "./data/content";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -28,12 +28,12 @@ const App = () => {
         <>
           <h1 className="main-title">YINNNNNNNNNN!</h1>
           <h2 className="about-me-title">About Me</h2>
-          <p className="intro-text">{aboutMeText}</p>
+          <p className="intro-text" dangerouslySetInnerHTML={{ __html:content.aboutMeText }}></p>
 
           <div className="tech-stack">
             <TechStack />
           </div>
-          <p className="tech-stack-explanation">{techStackExplanation}</p>
+          <p className="tech-stack-explanation" dangerouslySetInnerHTML={{__html:content.techStackExplanation}}></p>
           <br></br>
           <p className="prompt">
             Do check out some of my&nbsp;
