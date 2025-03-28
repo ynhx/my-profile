@@ -17,7 +17,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark transparent effect */
+    background: rgba(0, 0, 0, 0.5);
     z-index: 5;
   }
 
@@ -67,6 +67,17 @@
 .sidebar ul li:hover {
     background: #444;
 }
+
+.sidebar ul li.category {
+    color: gray;
+}
+
+.sidebar ul li.category:hover {
+    text-decoration: none;
+    background: none;
+    cursor: default;
+}
+
 
 @media (max-width: 768px) {
     .navbar {

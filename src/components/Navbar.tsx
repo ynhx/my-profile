@@ -19,9 +19,14 @@ const Navbar: React.FC<NavbarProps> = ({ setCurrentPage }) => {
 
         <div className={`sidebar ${menuOpen ? "open" : ""}`}>
           <ul>
+            <li className="category">ABOUT</li>
             <li onClick={() => { setCurrentPage("home"); setMenuOpen(false); }}>Home</li>
-            <li onClick={() => { setCurrentPage("projects"); setMenuOpen(false); }}>Projects</li>
+
+            <li className="category">EXPERIENCE</li>
             <li onClick={() => { setCurrentPage("resume"); setMenuOpen(false); }}>Resume</li>
+            <li onClick={() => { setCurrentPage("education"); setMenuOpen(false);}}>Education</li>
+            <li className="category">PORTFOLIO</li>
+            <li onClick={() => { setCurrentPage("projects"); setMenuOpen(false); }}>Projects</li>
           </ul>
         </div>
       </nav>

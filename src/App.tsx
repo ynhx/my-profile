@@ -7,6 +7,7 @@ import ContactForm from './components/ContactForm';
 import content from "./data/content";
 import Navbar from "./components/Navbar";
 import Resume from "./components/Resume";
+import Education from './components/Education';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -23,6 +24,8 @@ const App = () => {
       document.title = "My Projects | Yin";
     } else if (currentPage === "resume") {
       document.title = "Resume | Yin";
+    } else if (currentPage === "education") {
+      document.title = "Education | Yin";
     }
   }, [currentPage]);
 
@@ -53,6 +56,8 @@ const App = () => {
         <Projects goBack={() => setCurrentPage("home")} />
       ) : currentPage === "resume" ? (
         <Resume />
+      ) : currentPage === "education" ? (
+        <Education />
       ) : null}
       {showContactForm && (
         <ContactForm onClose={toggleContactForm} />
