@@ -70,6 +70,7 @@
 
 .sidebar ul li.category {
     color: gray;
+    font-size: 0.9em;
 }
 
 .sidebar ul li.category:hover {
@@ -82,6 +83,11 @@
 @media (max-width: 768px) {
     .navbar {
         padding: 10px;
+    }
+
+    .sidebar ul li.category {
+        color: gray;
+        font-size: 0.7em;
     }
 
     .hamburger {
@@ -101,6 +107,11 @@
 @media (max-width: 480px) {
     .navbar {
         padding: 8px;
+    }
+
+    .sidebar ul li.category {
+        color: gray;
+        font-size: 0.6em;
     }
 
     .hamburger {
