@@ -10,7 +10,6 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
         <div className="popup-overlay">
             <div className="popup">
                 <h2>Contact Me</h2>
-
                 {state.succeeded ? (
                     <div className="success-message">
                         <p className="message-sent">Message sent!</p>

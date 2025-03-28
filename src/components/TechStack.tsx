@@ -35,7 +35,7 @@ const TechStack = () => {
         ...techStack, ...techStack, ...techStack, ...techStack,
         ...techStack, ...techStack, ...techStack, ...techStack,
         ...techStack, ...techStack, ...techStack, ...techStack
-      ];
+    ];
 
     return (
         <div>

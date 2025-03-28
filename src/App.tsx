@@ -11,10 +11,9 @@ import Education from './components/Education';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home");
-  const [showContactForm, setShowContactForm] = useState(false); // State to manage contact form visibility
-
+  const [showContactForm, setShowContactForm] = useState(false);
   const toggleContactForm = () => {
-    setShowContactForm(!showContactForm); // Toggle the contact form
+    setShowContactForm(!showContactForm);
   };
 
   useEffect(() => {
