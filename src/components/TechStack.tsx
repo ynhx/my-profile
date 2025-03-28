@@ -24,7 +24,8 @@ const techStack = [
     { name: "Spring Boot", logo: springLogo },
     { name: "SQL", logo: sqlLogo },
     { name: "MySQL", logo: mysqlLogo },
-    { name: "Git", logo: gitLogo }
+    { name: "Git", logo: gitLogo },
+    { name: "React", logo: reactLogo }
 ];
 
 const TechStack = () => {
