@@ -20,7 +20,6 @@ const Navbar: React.FC<NavbarProps> = ({ setCurrentPage }) => {
           <ul>
             <li className="category">ABOUT</li>
             <li onClick={() => { setCurrentPage("home"); setMenuOpen(false); }}>Home</li>
-
             <li className="category">EXPERIENCE</li>
             <li onClick={() => { setCurrentPage("resume"); setMenuOpen(false); }}>Resume</li>
             <li onClick={() => { setCurrentPage("education"); setMenuOpen(false); }}>Education</li>
