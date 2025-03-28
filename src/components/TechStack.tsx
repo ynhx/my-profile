@@ -11,6 +11,7 @@ import springLogo from "../assets/springboot_logo.png";
 import sqlLogo from "../assets/sql_logo.webp";
 import mysqlLogo from "../assets/mysql_logo.png";
 import gitLogo from "../assets/git_logo.png";
+import reactLogo from "../assets/react_logo.png";
 
 const techStack = [
     { name: "Java", logo: javaLogo },
