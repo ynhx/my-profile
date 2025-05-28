@@ -1,6 +1,5 @@
 const content = {
-
-aboutMeText: `Hi! I am Yin. I am currently a Computer Science final-year student. I am soooooo close to
+  aboutMeText: `Hi! I am Yin. I am currently a Computer Science final-year student. I am soooooo close to
 graduating though, my school just needs me to complete an internship that runs
 for at least six month in order for me to be able to fulfill my graduation
 requirements.
@@ -13,11 +12,11 @@ as a software developer.
 This is my personal website (also still in the works) and below you can find the things I
 know so far, my expertise and things I am currently focused on.`,
 
-techStackExplanation: `Some of these, I learned at school, with Java being my main focus at school
+  techStackExplanation: `Some of these, I learned at school, with Java being my main focus at school
 and others I self-taught. As you can already guess, Java is my strong
 suit and also my favorite currently.`,
 
-projectDescription: `This is my first solo project
+  projectOneDescription: `This is my first solo project
 that I am currently working on. I have
 created a Liverpool FC fan page on
 <a href="https://www.facebook.com/eolupdates" target="_blank" rel="noopener noreferrer"> Facebook </a>
@@ -42,7 +41,15 @@ fans in general an independent platform of all things Liverpool.
 This app is going to have everything, and everything about Liverpool,
 going all the way back to its history down to latest updates from a minute
 ago. My idea is to have it all in there and to give myself more solo
-experience here, and to have something I am proud of.`
+experience here, and to have something I am proud of.`,
+
+  projectTwoDescription: `This is another very cool project I am currently working on with a team from my workplace.
+We are creating a Lecturers' Report System for my school, which is going to be used by lecturers to submit their reports
+and for the school to be able to keep track of them. I am a part of the back-end team on the project, using
+C# and the ASP.NET framework with the Entity Framework for the database.
+<br></br>
+Very exciting project and have learned a lot from it so far as well as from my team members, who have been incredible
+from the start.`,
 };
 
 export default content;

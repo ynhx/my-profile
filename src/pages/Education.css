@@ -1,0 +1,73 @@
+.education h2 {
+  font-size: 3rem;
+  margin: 15px 0;
+  padding-top: 30px;
+}
+
+.education ul {
+  list-style-type: none;
+  padding: 8px;
+}
+
+body {
+  background-color: black;
+  color: azure;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+li {
+  font-size: 18px;
+}
+
+li .course {
+  font-size: 16px;
+}
+
+li .period {
+  font-size: 14px;
+  padding-top: 4px;
+  font-style: oblique;
+  padding-bottom: 12px;
+}
+
+li .wrapper {
+  padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .education h2 {
+    font-size: 2.5rem;
+    padding-top: 20px;
+  }
+
+  li {
+    font-size: 16px;
+  }
+
+  li .course {
+    font-size: 14px;
+  }
+
+  li .period {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .education h2 {
+    font-size: 2.2rem;
+    padding-top: 15px;
+  }
+
+  li {
+    font-size: 16px;
+  }
+
+  li .course {
+    font-size: 14px;
+  }
+
+  li .period {
+    font-size: 12px;
+  }
+}

@@ -1,128 +1,128 @@
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    background: #222;
-    color: white;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: #222;
+  color: white;
+  z-index: 1000;
 }
 
 .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5;
 }
 
 .hamburger {
-    width: 30px;
-    height: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
 .hamburger span {
-    width: 100%;
-    height: 3px;
-    background: white;
-    transition: 0.3s;
+  width: 100%;
+  height: 3px;
+  background: white;
+  transition: 0.3s;
 }
 
 .sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100vh;
-    background: #333;
-    padding-top: 60px;
-    transition: left 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background: #333;
+  padding-top: 60px;
+  transition: left 0.3s ease-in-out;
 }
 
 .sidebar.open {
-    left: 0;
+  left: 0;
 }
 
 .sidebar ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .sidebar ul li {
-    padding: 15px 20px;
-    cursor: pointer;
-    color: white;
-    transition: background 0.3s;
+  padding: 15px 20px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s;
 }
 
 .sidebar ul li:hover {
-    background: #444;
+  background: #444;
 }
 
 .sidebar ul li.category {
-    color: gray;
-    font-size: 0.9em;
+  color: gray;
+  font-size: 0.9em;
 }
 
 .sidebar ul li.category:hover {
-    text-decoration: none;
-    background: none;
-    cursor: default;
+  text-decoration: none;
+  background: none;
+  cursor: default;
 }
 
 @media (max-width: 768px) {
-    .navbar {
-        padding: 10px;
-    }
+  .navbar {
+    padding: 10px;
+  }
 
-    .sidebar ul li.category {
-        color: gray;
-        font-size: 0.7em;
-    }
+  .sidebar ul li.category {
+    color: gray;
+    font-size: 0.7em;
+  }
 
-    .hamburger {
-        width: 25px;
-        height: 20px;
-    }
+  .hamburger {
+    width: 25px;
+    height: 20px;
+  }
 
-    .sidebar {
-        width: 200px;
-    }
+  .sidebar {
+    width: 200px;
+  }
 
-    .sidebar ul li {
-        padding: 10px 15px;
-    }
+  .sidebar ul li {
+    padding: 10px 15px;
+  }
 }
 
 @media (max-width: 480px) {
-    .navbar {
-        padding: 8px;
-    }
+  .navbar {
+    padding: 8px;
+  }
 
-    .sidebar ul li.category {
-        color: gray;
-        font-size: 0.6em;
-    }
+  .sidebar ul li.category {
+    color: gray;
+    font-size: 0.6em;
+  }
 
-    .hamburger {
-        width: 20px;
-        height: 15px;
-    }
+  .hamburger {
+    width: 20px;
+    height: 15px;
+  }
 
-    .sidebar {
-        width: 180px;
-    }
+  .sidebar {
+    width: 180px;
+  }
 
-    .sidebar ul li {
-        padding: 8px 12px;
-    }
+  .sidebar ul li {
+    padding: 8px 12px;
+  }
 }

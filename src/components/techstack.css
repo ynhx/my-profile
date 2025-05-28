@@ -52,7 +52,6 @@
 }
 
 @media (max-width: 768px) {
-
   .tech-stack-slider {
     animation: scroll 40s linear infinite;
     gap: 45px;
@@ -75,7 +74,6 @@
 }
 
 @media (max-width: 480px) {
-
   .tech-stack-slider {
     animation: scroll 50s linear infinite;
     gap: 30px;

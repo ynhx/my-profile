@@ -1,90 +1,89 @@
 .app-container {
-    text-align: center;
-    padding: 20px;
-    overflow-x: hidden;
+  text-align: center;
+  padding: 20px;
+  overflow-x: hidden;
 }
 
 .main-title {
-    font-size: 4rem;
-    margin: 20px 0;
-    padding: 50px;
-    white-space: normal;
-    ;
+  font-size: 4rem;
+  margin: 20px 0;
+  padding: 50px;
+  white-space: normal;
 }
 
 .about-me-title {
-    font-size: 3rem;
-    margin: 15px 0;
-    padding-bottom: 20px;
+  font-size: 3rem;
+  margin: 15px 0;
+  padding-bottom: 20px;
 }
 
 .intro-text {
-    font-size: 1.5rem;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 body {
-    background-color: black;
-    color: azure;
+  background-color: black;
+  color: azure;
 }
 
 .projects-link {
-    color: darkseagreen;
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
+  color: darkseagreen;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .projects-link:hover {
-    color: darkolivegreen;
+  color: darkolivegreen;
 }
 
 .prompt {
-    font-size: 1.5rem;
-    max-width: 800px;
-    margin: 0 auto;
-    padding-top: 20px;
-    padding-bottom: 40px;
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
 .tech-stack-explanation {
-    font-size: 0.9rem;
-    max-width: 800px;
-    margin: 0 auto;
+  font-size: 0.9rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
-    .main-title {
-        font-size: 3rem;
-        padding: 10px;
-    }
+  .main-title {
+    font-size: 3rem;
+    padding: 10px;
+  }
 
-    .about-me-title {
-        font-size: 2rem;
-    }
+  .about-me-title {
+    font-size: 2rem;
+  }
 
-    .intro-text {
-        font-size: 1.2rem;
-    }
+  .intro-text {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 480px) {
-    .main-title {
-        font-size: 2rem;
-        padding: 5px;
-    }
+  .main-title {
+    font-size: 2rem;
+    padding: 5px;
+  }
 
-    .about-me-title {
-        font-size: 1.5rem;
-    }
+  .about-me-title {
+    font-size: 1.5rem;
+  }
 
-    .intro-text {
-        font-size: 1rem;
-    }
+  .intro-text {
+    font-size: 1rem;
+  }
 
-    .prompt {
-        font-size: 1rem;
-    }
+  .prompt {
+    font-size: 1rem;
+  }
 }

@@ -1,13 +1,13 @@
-import { useState, useEffect } from 'react';
-import './styles.css';
+import { useState, useEffect } from "react";
+import "./styles.css";
 import TechStack from "./components/TechStack";
-import Projects from "./components/Projects";
+import Projects from "./pages/Projects";
 import Footer from "./components/Footer";
-import ContactForm from './components/ContactForm';
+import ContactForm from "./components/ContactForm";
 import content from "./data/content";
 import Navbar from "./components/Navbar";
-import Resume from "./components/Resume";
-import Education from './components/Education';
+import Resume from "./pages/Resume";
+import Education from "./pages/Education";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -35,20 +35,28 @@ const App = () => {
         <>
           <h1 className="main-title">YINNNNNNNNNN!</h1>
           <h2 className="about-me-title">About Me</h2>
-          <p className="intro-text" dangerouslySetInnerHTML={{ __html:content.aboutMeText }}></p>
+          <p
+            className="intro-text"
+            dangerouslySetInnerHTML={{ __html: content.aboutMeText }}
+          ></p>
 
           <div className="tech-stack">
             <TechStack />
           </div>
-          <p className="tech-stack-explanation" dangerouslySetInnerHTML={{__html:content.techStackExplanation}}></p>
+          <p
+            className="tech-stack-explanation"
+            dangerouslySetInnerHTML={{ __html: content.techStackExplanation }}
+          ></p>
           <br></br>
           <p className="prompt">
             Do check out some of my&nbsp;
-            <span className="projects-link" onClick={() => setCurrentPage("projects")}>
+            <span
+              className="projects-link"
+              onClick={() => setCurrentPage("projects")}
+            >
               projects
             </span>
-            &nbsp;that I have created/am working on
-            using some of these tools.
+            &nbsp;that I have created/am working on using some of these tools.
           </p>
         </>
       ) : currentPage === "projects" ? (
@@ -58,9 +66,7 @@ const App = () => {
       ) : currentPage === "education" ? (
         <Education />
       ) : null}
-      {showContactForm && (
-        <ContactForm onClose={toggleContactForm} />
-      )}
+      {showContactForm && <ContactForm onClose={toggleContactForm} />}
       <Footer onContactClick={toggleContactForm} />
     </div>
   );
