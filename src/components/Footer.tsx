@@ -8,7 +8,7 @@ const Footer = ({ onContactClick }: { onContactClick: () => void }) => {
             <div className="footer-content">
                 <h3>Where to find Yin</h3>
                 <div className="social-links">
-                    <a href="https://github.com/yinnxx" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/yinndlovu" target="_blank" rel="noopener noreferrer">
                         <FaGithub className="social-icon" />
                     </a>
                     <a href="https://discordapp.com/users/1296419884363943936/" target="_blank" rel="noopener noreferrer">
