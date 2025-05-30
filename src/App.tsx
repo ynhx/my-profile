@@ -8,67 +8,56 @@ import content from "./data/content";
 import Navbar from "./components/Navbar";
 import Resume from "./pages/Resume";
 import Education from "./pages/Education";
+import { HashRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState("home");
   const [showContactForm, setShowContactForm] = useState(false);
-  const toggleContactForm = () => {
-    setShowContactForm(!showContactForm);
-  };
-
-  useEffect(() => {
-    if (currentPage === "home") {
-      document.title = "Main page | Yin";
-    } else if (currentPage === "projects") {
-      document.title = "My Projects | Yin";
-    } else if (currentPage === "resume") {
-      document.title = "Resume | Yin";
-    } else if (currentPage === "education") {
-      document.title = "Education | Yin";
-    }
-  }, [currentPage]);
+  const toggleContactForm = () => setShowContactForm(!showContactForm);
 
   return (
-    <div className="app-container">
-      <Navbar setCurrentPage={setCurrentPage} />
-      {currentPage === "home" ? (
-        <>
-          <h1 className="main-title">YINNNNNNNNNN!</h1>
-          <h2 className="about-me-title">About Me</h2>
-          <p
-            className="intro-text"
-            dangerouslySetInnerHTML={{ __html: content.aboutMeText }}
-          ></p>
-
-          <div className="tech-stack">
-            <TechStack />
-          </div>
-          <p
-            className="tech-stack-explanation"
-            dangerouslySetInnerHTML={{ __html: content.techStackExplanation }}
-          ></p>
-          <br></br>
-          <p className="prompt">
-            Do check out some of my&nbsp;
-            <span
-              className="projects-link"
-              onClick={() => setCurrentPage("projects")}
-            >
-              projects
-            </span>
-            &nbsp;that I have created/am working on using some of these tools.
-          </p>
-        </>
-      ) : currentPage === "projects" ? (
-        <Projects goBack={() => setCurrentPage("home")} />
-      ) : currentPage === "resume" ? (
-        <Resume />
-      ) : currentPage === "education" ? (
-        <Education />
-      ) : null}
-      {showContactForm && <ContactForm onClose={toggleContactForm} />}
-      <Footer onContactClick={toggleContactForm} />
-    </div>
+    <Router>
+      <div className="app-container">
+        <Navbar />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <h1 className="main-title">YINNNNNNNNNN!</h1>
+                <h2 className="about-me-title">About Me</h2>
+                <p
+                  className="intro-text"
+                  dangerouslySetInnerHTML={{ __html: content.aboutMeText }}
+                ></p>
+                <div className="tech-stack">
+                  <TechStack />
+                </div>
+                <p
+                  className="tech-stack-explanation"
+                  dangerouslySetInnerHTML={{ __html: content.techStackExplanation }}
+                ></p>
+                <br />
+                <p className="prompt">
+                  Do check out some of my&nbsp;
+                  <span
+                    className="projects-link"
+                    onClick={() => window.location.hash = "#/projects"}
+                  >
+                    projects
+                  </span>
+                  &nbsp;that I have created/am working on using some of these tools.
+                </p>
+              </>
+            }
+          />
+          <Route path="/projects" element={<Projects goBack={() => window.location.hash = "#/"} />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/education" element={<Education />} />
+        </Routes>
+        {showContactForm && <ContactForm onClose={toggleContactForm} />}
+        <Footer onContactClick={toggleContactForm} />
+      </div>
+    </Router>
   );
 };
 
