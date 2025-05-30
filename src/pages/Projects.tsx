@@ -8,7 +8,7 @@ interface ProjectsProps {
 
 const Projects: React.FC<ProjectsProps> = ({ goBack }) => {
   useEffect(() => {
-    document.title = "My Projects | Yin";
+    document.title = "Projects | Yin";
   }, []);
 
   return (
