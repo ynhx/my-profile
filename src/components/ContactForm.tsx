@@ -6,9 +6,15 @@ import redXIcon from "../assets/red_x_icon.png";
 const ContactForm = ({ onClose }: { onClose: () => void }) => {
   const [state, handleSubmit] = useForm("xqaedrze");
 
+  const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
   return (
-    <div className="popup-overlay">
-      <div className="popup">
+    <div className="popup-overlay" onClick={handleOverlayClick}>
+      <div className="popup" onClick={e => e.stopPropagation()}>
         <h2>Contact Me</h2>
         {state.succeeded ? (
           <div className="success-message">
