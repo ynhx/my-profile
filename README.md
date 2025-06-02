@@ -1,1 +1,1 @@
-personal website with React
+Personal website with React.
