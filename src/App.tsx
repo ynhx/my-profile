@@ -20,7 +20,7 @@ const App = () => {
     if (currentPage === "home") {
       document.title = "Main page | Yin";
     } else if (currentPage === "projects") {
-      document.title = "My Projects | Yin";
+      document.title = "Projects | Yin";
     } else if (currentPage === "resume") {
       document.title = "Resume | Yin";
     } else if (currentPage === "education") {
