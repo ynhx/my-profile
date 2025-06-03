@@ -13,7 +13,7 @@ const Projects: React.FC<ProjectsProps> = ({ goBack }) => {
 
   return (
     <div className="projects-container">
-      <h2 className="my-projects-title">My Projects</h2>
+      <h2 className="my-projects-title">Projects</h2>
       <p className="project-title">1. Liverpool FC Mobile App</p>
       <br></br>
       <p
