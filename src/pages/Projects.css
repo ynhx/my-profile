@@ -11,6 +11,7 @@ body {
 }
 
 .project-desc {
+  padding-bottom: 50px;
   font-size: 1.3rem;
   max-width: 800px;
   margin: 0 auto;
@@ -31,6 +32,7 @@ body {
   font-style: italic;
   font-size: 14px;
   padding: 15px;
+  color: rgb(214, 214, 214);
 }
 
 button {
@@ -70,6 +72,7 @@ a:hover {
   }
 
   .project-desc {
+    padding-bottom: 35px;
     font-size: 1.2rem;
   }
 }
