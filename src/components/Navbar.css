@@ -1,24 +1,20 @@
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 15px;
-  background: #222;
-  color: white;
-  z-index: 1000;
+  display: none;
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 5;
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    background: #181a1f;
+    color: white;
+    z-index: 1000;
+  }
 }
 
 .hamburger {
@@ -37,15 +33,26 @@
   transition: 0.3s;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
 .sidebar {
   position: fixed;
   top: 0;
-  left: -250px;
+  left: 0;
   width: 250px;
   height: 100vh;
-  background: #333;
+  background: #181a1f;
   padding-top: 60px;
-  transition: left 0.3s ease-in-out;
+  transition: none;
+  z-index: 1001;
 }
 
 .sidebar.open {
@@ -62,10 +69,11 @@
   cursor: pointer;
   color: white;
   transition: background 0.3s;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .sidebar ul li:hover {
-  background: #444;
+  background: #344150;
 }
 
 .sidebar ul li.category {
@@ -79,7 +87,25 @@
   cursor: default;
 }
 
+.sidebar ul li.active {
+  background: #222b36;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
 @media (max-width: 768px) {
+  .sidebar {
+    left: -250px;
+    transition: left 0.3s ease-in-out;
+    width: 170px;
+    background: #181a1f;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
   .navbar {
     padding: 10px;
   }
@@ -93,17 +119,13 @@
     width: 25px;
     height: 20px;
   }
-
-  .sidebar {
-    width: 200px;
-  }
-
-  .sidebar ul li {
-    padding: 10px 15px;
-  }
 }
 
 @media (max-width: 480px) {
+  .sidebar {
+    width: 160px;
+  }
+
   .navbar {
     padding: 8px;
   }
@@ -117,12 +139,41 @@
     width: 20px;
     height: 15px;
   }
+}
 
-  .sidebar {
-    width: 180px;
+.hamburger.mobile-only,
+.overlay.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .hamburger.mobile-only,
+  .overlay.mobile-only {
+    display: block;
+  }
+}
+
+.mobile-sidebar {}
+
+@media (max-width: 768px) {
+  .mobile-sidebar {
+    left: -250px;
+    transition: left 0.3s ease-in-out;
+    width: 170px;
+    background: #181a1f;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    z-index: 10;
   }
 
-  .sidebar ul li {
-    padding: 8px 12px;
+  .mobile-sidebar.open {
+    left: 0;
   }
+}
+
+.sidebar,
+.mobile-sidebar {
+  z-index: 1001;
 }

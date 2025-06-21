@@ -50,7 +50,7 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <Navbar setCurrentPage={handleSetCurrentPage} />
+      <Navbar setCurrentPage={handleSetCurrentPage} currentPage={currentPage} />
       <div className={`fade-page${pageVisible ? " visible" : ""}`}>
         {currentPage === "home" ? (
           <>

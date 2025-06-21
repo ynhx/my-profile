@@ -38,7 +38,7 @@ const Projects: React.FC<ProjectsProps> = ({ goBack, goToProjectTwoDetails }) =>
 
       <div className="project-title-row">
         <p className="project-title">
-          2. Lecturers' Report System
+          2. Lecturers Report System
         </p>
         <button
           onClick={goToProjectTwoDetails}

@@ -3,6 +3,7 @@
   padding-bottom: 20px;
   overflow-x: hidden;
   margin-top: 20px;
+  margin-left: 250px;
 }
 
 .main-title {
@@ -60,6 +61,7 @@ body {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
+
 .fade-page.visible {
   opacity: 1;
 }
@@ -74,7 +76,7 @@ body {
 
 @media (max-width: 768px) {
   .app-container {
-    margin-top: 20px;
+    margin-left: 0;
   }
 
   .glow-text {

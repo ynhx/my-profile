@@ -1,10 +1,10 @@
 .project-two-details {
   max-width: 800px;
   margin: 40px auto;
-  background: #1a222c;
+  background: #14181d;
   padding: 32px 24px;
   border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
   color: #e6e6e6;
 }
 
@@ -29,7 +29,7 @@
 
 .project-two-images img {
   border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
   width: 350px;
   max-width: 100%;
   height: auto;
@@ -51,18 +51,77 @@
   margin: 0;
 }
 
+.project-two-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
 .project-two-back-button {
   background: darkseagreen;
   color: #fff;
   border: none;
-  padding: 10px 24px;
+  padding: 10px 12px;
   border-radius: 6px;
-  font-size: 1rem;
   cursor: pointer;
   margin-top: 16px;
   transition: background 0.2s;
+  font-weight: bold;
+  font-size: small;
 }
 
 .project-two-back-button:hover {
-  background: rgb(100, 129, 100);
+  background-color: rgb(100, 129, 100);
+  color: rgb(212, 212, 212);
+}
+
+@media (max-width: 480px) {
+  .project-two-details .glow-text {
+    font-size: 1.6rem;
+  }
+
+  .project-two-details .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .project-two-details p {
+    font-size: 0.7rem;
+  }
+
+  .project-two-section h4 {
+    font-size: 0.8rem;
+  }
+
+  .project-two-back-button {
+    font-size: 0.6rem;
+    padding: 5px 7px;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-two-details .glow-text {
+    font-size: 1.8rem;
+  }
+
+  .project-two-details .subtitle {
+    font-size: 1rem;
+  }
+
+  .project-two-details p {
+    font-size: 0.8rem;
+  }
+
+  .project-two-section h4 {
+    font-size: 0.9rem;
+  }
+
+  .project-two-section li {
+    font-size: 0.9rem;
+  }
+
+  .project-two-back-button {
+    font-size: 0.7rem;
+    padding: 6px 8px;
+    margin-top: 10px;
+  }
 }

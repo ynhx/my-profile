@@ -49,7 +49,11 @@ and for the school to be able to keep track of them. I am a part of the back-end
 C# and the ASP.NET framework with the Entity Framework for the database.
 <br></br>
 Very exciting project and have learned a lot from it so far as well as from my team members, who have been incredible
-from the start.`,
+from the start.
+<br></br>
+PS: I don't own this project,
+<a href="https://www.icep.co.za/" target="_blank" rel="noopener noreferrer"> ICEP </a>
+does - the place I am doing my internship at.`,
 };
 
 export default content;
