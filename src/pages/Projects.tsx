@@ -25,7 +25,7 @@ const Projects: React.FC<ProjectsProps> = ({ goBack }) => {
       <p
         className="project-desc"
         dangerouslySetInnerHTML={{ __html: content.projectTwoDescription }}
-        ></p>
+      ></p>
       <div className="message">
         <p>More of my projects that I happen to create will be added here.</p>
       </div>
