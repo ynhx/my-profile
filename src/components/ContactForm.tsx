@@ -1,20 +1,38 @@
-import "./contactform.css";
+import { useState, useEffect } from "react";
+import "./ContactForm.css";
 import { useForm, ValidationError } from "@formspree/react";
 import tickIcon from "../assets/tick_icon.png";
 import redXIcon from "../assets/red_x_icon.png";
 
 const ContactForm = ({ onClose }: { onClose: () => void }) => {
   const [state, handleSubmit] = useForm("xqaedrze");
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShow(true), 10);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleClose = () => {
+    setShow(false);
+    setTimeout(onClose, 300);
+  };
 
   const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
-      onClose();
+      handleClose();
     }
   };
 
   return (
-    <div className="popup-overlay" onClick={handleOverlayClick}>
-      <div className="popup" onClick={e => e.stopPropagation()}>
+    <div
+      className={`popup-overlay ${show ? "show" : ""}`}
+      onClick={handleOverlayClick}
+    >
+      <div
+        className={`popup ${show ? "show" : ""}`}
+        onClick={e => e.stopPropagation()}
+      >
         <h2>Contact Me</h2>
         {state.succeeded ? (
           <div className="success-message">
@@ -54,7 +72,7 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
             <img src={redXIcon} alt="Red X icon" className="x-icon" />
           </div>
         )}
-        <button className="close-button" onClick={onClose}>
+        <button className="close-button" onClick={handleClose}>
           Close
         </button>
       </div>
