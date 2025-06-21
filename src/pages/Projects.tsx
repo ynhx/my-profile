@@ -4,23 +4,52 @@ import content from "../data/content";
 
 interface ProjectsProps {
   goBack: () => void;
+  goToProjectTwoDetails: () => void;
 }
 
-const Projects: React.FC<ProjectsProps> = ({ goBack }) => {
+const Projects: React.FC<ProjectsProps> = ({ goBack, goToProjectTwoDetails }) => {
   useEffect(() => {
     document.title = "Projects | Yin";
   }, []);
 
   return (
     <div className="projects-container">
+
       <h2 className="my-projects-title">Projects</h2>
-      <p className="project-title">1. Liverpool FC Mobile App</p>
+      <div className="project-title-row">
+        <p className="project-title">
+          1. Liverpool FC Mobile App
+        </p>
+        <button
+          // onClick={goToProjectTwoDetails}
+          title="View project details"
+          className="project-title-link"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 3h7m0 0v7m0-7L10 14m-4 0v7h7" />
+          </svg>
+        </button>
+      </div>
       <br></br>
       <p
         className="project-desc"
         dangerouslySetInnerHTML={{ __html: content.projectOneDescription }}
       ></p>
-      <p className="project-title">2. Lecturers' Report System</p>
+
+      <div className="project-title-row">
+        <p className="project-title">
+          2. Lecturers' Report System
+        </p>
+        <button
+          onClick={goToProjectTwoDetails}
+          title="View project details"
+          className="project-title-link"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 3h7m0 0v7m0-7L10 14m-4 0v7h7" />
+          </svg>
+        </button>
+      </div>
       <br></br>
       <p
         className="project-desc"
@@ -29,7 +58,7 @@ const Projects: React.FC<ProjectsProps> = ({ goBack }) => {
       <div className="message">
         <p>More of my projects that I happen to create will be added here.</p>
       </div>
-      <button onClick={goBack} className="back-button">
+      <button onClick={goBack} className="projects-back-button">
         Home
       </button>
     </div>

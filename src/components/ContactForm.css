@@ -27,6 +27,7 @@
   width: 350px;
   transform: scale(0.9);
   transition: transform 0.3s ease-in-out;
+  position: relative;
 }
 
 .popup.show {
@@ -57,29 +58,41 @@
   height: 70px;
 }
 
-.form button {
-  background-color: #007bff;
-  color: white;
+.contact-form-submit-button {
+  border-radius: 10px;
   padding: 10px;
-  border: none;
-  border-radius: 4px;
+  font-weight: bold;
+  color: white;
+  background-color: darkseagreen;
   cursor: pointer;
+  transition: background 0.2s;
+  border: none;
 }
 
-.form button:hover {
-  background-color: #0056b3;
+.contact-form-submit-button:hover {
+  background-color: rgb(100, 129, 100);
+  color: rgb(212, 212, 212);
 }
 
-.close-button {
-  background-color: red;
+.contact-form-x-button {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
   border: none;
   color: white;
   cursor: pointer;
-  margin-top: 10px;
+  padding: 4px;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background 0.2s, color 0.2s;
 }
 
-.close-button:hover {
-  background-color: darkred;
+.contact-form-x-button:hover,
+.contact-form-x-button:focus {
+  background: none;
+  color: #ff4d4f;
+  outline: none;
 }
 
 .tick-icon {
@@ -96,4 +109,8 @@
 
 .message-sent {
   font-size: 16px;
+}
+
+.contact-form-close-button {
+  display: none;
 }

@@ -1,4 +1,4 @@
-import './footer.css';
+import './Footer.css';
 import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
 
 const Footer = ({ onContactClick }: { onContactClick: () => void }) => {

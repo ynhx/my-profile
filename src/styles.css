@@ -38,11 +38,11 @@ body {
 }
 
 .projects-link:hover {
-  color: darkolivegreen;
+  color: rgb(100, 129, 100);
 }
 
 .prompt {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   max-width: 800px;
   margin: 0 auto;
   padding-top: 20px;
@@ -128,6 +128,6 @@ body {
   }
 
   .prompt {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }

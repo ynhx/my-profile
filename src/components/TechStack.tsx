@@ -1,19 +1,19 @@
-import "./techstack.css";
+import "./TechStack.css";
 
-import javaLogo from "../assets/java_logo.png";
-import kotlinLogo from "../assets/kotlin_logo.png";
-import jsLogo from "../assets/js_logo.png";
-import tsLogo from "../assets/ts_logo.png";
-import nodeLogo from "../assets/nodejs_logo.png";
-import htmlLogo from "../assets/html_logo.png";
-import cssLogo from "../assets/css_logo.svg";
-import springLogo from "../assets/springboot_logo.png";
-import sqlLogo from "../assets/sql_logo.webp";
-import mysqlLogo from "../assets/mysql_logo.png";
-import gitLogo from "../assets/git_logo.png";
-import reactLogo from "../assets/react_logo.png";
-import csharpLogo from "../assets/csharp_logo.png";
-import netCoreLogo from "../assets/netcore_logo.svg.png";
+import javaLogo from "../assets/logos/java_logo.png";
+import kotlinLogo from "../assets/logos/kotlin_logo.png";
+import jsLogo from "../assets/logos/js_logo.png";
+import tsLogo from "../assets/logos/ts_logo.png";
+import nodeLogo from "../assets/logos/nodejs_logo.png";
+import htmlLogo from "../assets/logos/html_logo.png";
+import cssLogo from "../assets/logos/css_logo.svg";
+import springLogo from "../assets/logos/springboot_logo.png";
+import sqlLogo from "../assets/logos/sql_logo.webp";
+import mysqlLogo from "../assets/logos/mysql_logo.png";
+import gitLogo from "../assets/logos/git_logo.png";
+import reactLogo from "../assets/logos/react_logo.png";
+import csharpLogo from "../assets/logos/csharp_logo.png";
+import netCoreLogo from "../assets/logos/netcore_logo.svg.png";
 
 const techStack = [
   { name: "Java", logo: javaLogo },

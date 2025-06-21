@@ -8,6 +8,7 @@ import content from "./data/content";
 import Navbar from "./components/Navbar";
 import Resume from "./pages/Resume";
 import Education from "./pages/Education";
+import ProjectTwoDetails from "./pages/projects-details/ProjectTwoDetails";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -80,11 +81,16 @@ const App = () => {
             </p>
           </>
         ) : currentPage === "projects" ? (
-          <Projects goBack={() => handleSetCurrentPage("home")} />
+          <Projects 
+            goBack={() => handleSetCurrentPage("home")}
+            goToProjectTwoDetails={() => handleSetCurrentPage("projectTwoDetails")}
+          />
         ) : currentPage === "resume" ? (
           <Resume />
         ) : currentPage === "education" ? (
           <Education />
+        ) : currentPage === "projectTwoDetails" ? (
+          <ProjectTwoDetails goBack={() => handleSetCurrentPage("projects")} />
         ) : null}
       </div>
       {showContactForm && <ContactForm onClose={toggleContactForm} />}

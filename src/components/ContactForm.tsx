@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import "./ContactForm.css";
 import { useForm, ValidationError } from "@formspree/react";
-import tickIcon from "../assets/tick_icon.png";
-import redXIcon from "../assets/red_x_icon.png";
+import tickIcon from "../assets/icons/tick_icon.png";
+import redXIcon from "../assets/icons/red_x_icon.png";
+import { FiX } from "react-icons/fi";
 
 const ContactForm = ({ onClose }: { onClose: () => void }) => {
   const [state, handleSubmit] = useForm("xqaedrze");
@@ -33,6 +34,14 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
         className={`popup ${show ? "show" : ""}`}
         onClick={e => e.stopPropagation()}
       >
+        <button
+          className="contact-form-x-button"
+          onClick={handleClose}
+          aria-label="Close contact form"
+          type="button"
+        >
+          <FiX size={28} />
+        </button>
         <h2>Contact Me</h2>
         {state.succeeded ? (
           <div className="success-message">
@@ -61,7 +70,9 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
               errors={state.errors}
             />
 
-            <button type="submit" disabled={state.submitting}>
+            <button type="submit" disabled={state.submitting}
+              className="contact-form-submit-button"
+            >
               Send Message
             </button>
           </form>
@@ -72,9 +83,6 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
             <img src={redXIcon} alt="Red X icon" className="x-icon" />
           </div>
         )}
-        <button className="close-button" onClick={handleClose}>
-          Close
-        </button>
       </div>
     </div>
   );

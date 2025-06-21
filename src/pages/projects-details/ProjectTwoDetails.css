@@ -1,0 +1,68 @@
+.project-two-details {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #1a222c;
+  padding: 32px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  color: #e6e6e6;
+}
+
+.project-two-details .glow-text {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.project-two-details .subtitle {
+  font-size: 1.2rem;
+  color: #b0c4de;
+  margin-bottom: 24px;
+}
+
+.project-two-images {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.project-two-images img {
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  width: 350px;
+  max-width: 100%;
+  height: auto;
+  background: #222;
+}
+
+.project-two-section {
+  margin-bottom: 24px;
+}
+
+.project-two-section h4 {
+  color: #7e91a5;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.project-two-section ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.project-two-back-button {
+  background: darkseagreen;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: background 0.2s;
+}
+
+.project-two-back-button:hover {
+  background: rgb(100, 129, 100);
+}
