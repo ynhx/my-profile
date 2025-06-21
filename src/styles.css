@@ -77,6 +77,16 @@ body {
     margin-top: 14px;
   }
 
+  .glow-text {
+    color: #fff;
+    text-shadow:
+      0 0 4px #7e91a5,
+      0 0 6px #7e91a5,
+      0 0 8px #7e91a5,
+      0 0 10px #7e91a5;
+    font-weight: bold;
+  }
+
   .main-title {
     font-size: 3rem;
     padding: 10px;
@@ -94,6 +104,16 @@ body {
 @media (max-width: 480px) {
   .app-container {
     margin-top: 12px;
+  }
+
+  .glow-text {
+    color: #fff;
+    text-shadow:
+      0 0 4px #7e91a5,
+      0 0 6px #7e91a5,
+      0 0 8px #7e91a5,
+      0 0 10px #7e91a5;
+    font-weight: bold;
   }
 
   .main-title {
