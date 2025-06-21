@@ -81,6 +81,10 @@ a:hover {
     padding-bottom: 35px;
     font-size: 1rem;
   }
+
+  .message {
+    font-size: 11px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -96,6 +100,10 @@ a:hover {
 
   .project-desc {
     font-size: 0.9rem;
+  }
+
+  .message {
+    font-size: 11px;
   }
 }
 
