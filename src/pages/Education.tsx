@@ -8,14 +8,14 @@ const Education: React.FC = () => {
       <p>My educational background so far</p>
       <ul>
         <li>
-          <strong>University of Venda</strong>
+          <strong className="glow-text">University of Venda</strong>
           <ul>
             <li className="course">Mining and Environmental Geology</li>
             <li className="period">2020 - 2020</li>
           </ul>
         </li>
         <li>
-          <strong>Tshwane University of Technology</strong>
+          <strong className="glow-text">Tshwane University of Technology</strong>
           <ul>
             <li className="course">Computer Science</li>
             <li className="period">2021 - 2025</li>

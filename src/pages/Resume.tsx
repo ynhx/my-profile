@@ -8,7 +8,7 @@ const Resume: React.FC = () => {
       <p>All of my experience so far</p>
       <ul>
         <li>
-          <strong>Enormity of LFC</strong>
+          <strong className="glow-text">Enormity of LFC</strong>
           <ul>
             <li className="responsibility">
               Software Engineer, Business Analyst, Creator
@@ -17,14 +17,14 @@ const Resume: React.FC = () => {
           </ul>
         </li>
         <li>
-          <strong>Went Initiatives</strong>
+          <strong className="glow-text">Went Initiatives</strong>
           <ul>
             <li className="responsibility">Backend Developer Intern</li>
             <li className="period">June 2023 - April 2024</li>
           </ul>
         </li>
         <li>
-          <strong>ICEP</strong>
+          <strong className="glow-text">ICEP</strong>
           <ul>
             <li className="responsibility">Software Developer Intern</li>
             <li className="period">March 2025 - Present</li>
