@@ -12,6 +12,8 @@ import Education from "./pages/Education";
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home");
   const [showContactForm, setShowContactForm] = useState(false);
+  const [pageVisible, setPageVisible] = useState(true);
+  const [pendingPage, setPendingPage] = useState<string | null>(null);
   const toggleContactForm = () => {
     setShowContactForm(!showContactForm);
   };
@@ -28,44 +30,63 @@ const App = () => {
     }
   }, [currentPage]);
 
+  const handleSetCurrentPage = (page: string) => {
+    if (page === currentPage) return;
+    setPageVisible(false);
+    setPendingPage(page);
+  };
+
+  useEffect(() => {
+    if (!pageVisible && pendingPage) {
+      const timer = setTimeout(() => {
+        setCurrentPage(pendingPage);
+        setPageVisible(true);
+        setPendingPage(null);
+      }, 300);
+      return () => clearTimeout(timer);
+    }
+  }, [pageVisible, pendingPage]);
+
   return (
     <div className="app-container">
-      <Navbar setCurrentPage={setCurrentPage} />
-      {currentPage === "home" ? (
-        <>
-          <h1 className="main-title">YINNNNNNNNNN!</h1>
-          <h2 className="about-me-title">About Me</h2>
-          <p
-            className="intro-text"
-            dangerouslySetInnerHTML={{ __html: content.aboutMeText }}
-          ></p>
+      <Navbar setCurrentPage={handleSetCurrentPage} />
+      <div className={`fade-page${pageVisible ? " visible" : ""}`}>
+        {currentPage === "home" ? (
+          <>
+            <h1 className="main-title">YINNNNNNNNNN!</h1>
+            <h2 className="about-me-title">About Me</h2>
+            <p
+              className="intro-text"
+              dangerouslySetInnerHTML={{ __html: content.aboutMeText }}
+            ></p>
 
-          <div className="tech-stack">
-            <TechStack />
-          </div>
-          <p
-            className="tech-stack-explanation"
-            dangerouslySetInnerHTML={{ __html: content.techStackExplanation }}
-          ></p>
-          <br></br>
-          <p className="prompt">
-            Do check out some of my&nbsp;
-            <span
-              className="projects-link"
-              onClick={() => setCurrentPage("projects")}
-            >
-              projects
-            </span>
-            &nbsp;that I have created/am working on using some of these tools.
-          </p>
-        </>
-      ) : currentPage === "projects" ? (
-        <Projects goBack={() => setCurrentPage("home")} />
-      ) : currentPage === "resume" ? (
-        <Resume />
-      ) : currentPage === "education" ? (
-        <Education />
-      ) : null}
+            <div className="tech-stack">
+              <TechStack />
+            </div>
+            <p
+              className="tech-stack-explanation"
+              dangerouslySetInnerHTML={{ __html: content.techStackExplanation }}
+            ></p>
+            <br></br>
+            <p className="prompt">
+              Do check out some of my&nbsp;
+              <span
+                className="projects-link"
+                onClick={() => handleSetCurrentPage("projects")}
+              >
+                projects
+              </span>
+              &nbsp;that I have created/am working on using some of these tools.
+            </p>
+          </>
+        ) : currentPage === "projects" ? (
+          <Projects goBack={() => handleSetCurrentPage("home")} />
+        ) : currentPage === "resume" ? (
+          <Resume />
+        ) : currentPage === "education" ? (
+          <Education />
+        ) : null}
+      </div>
       {showContactForm && <ContactForm onClose={toggleContactForm} />}
       <Footer onContactClick={toggleContactForm} />
     </div>
